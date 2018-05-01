@@ -26,4 +26,30 @@
 }
 
 
+- (IBAction)SetColor:(id)sender {
+    self.Label.textColor = [UIColor redColor];
+}
+
+- (IBAction)SetSizeFont:(id)sender {
+   [self.Label setFont:[UIFont fontWithName:@"Verdana" size:25]];
+}
+
+- (IBAction)SetShadow:(id)sender {
+    self.Label.layer.shadowColor = [[UIColor blackColor] CGColor];
+    self.Label.layer.shadowOpacity =  0.5;
+    self.Label.layer.shadowRadius = 1.0f;
+    self.Label.layer.shadowOffset = CGSizeMake(0, 2);
+}
+
+- (IBAction)AlignLeft:(id)sender {
+    self.Label.textAlignment = NSTextAlignmentLeft;
+}
+
+- (IBAction)AlignRigth:(id)sender {
+    self.Label.textAlignment = NSTextAlignmentRight;
+}
+
+- (IBAction)AlignCenter:(id)sender {
+    self.Label.textAlignment = NSTextAlignmentCenter;
+}
 @end
